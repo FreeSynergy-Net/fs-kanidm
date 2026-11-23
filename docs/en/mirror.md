@@ -1,6 +1,6 @@
 # Mirror and verification
 
-Kanidm publishes no signed packages (checked 2026-11-11): GitHub releases carry no files, the tag `v1.12.1` and its commit are unsigned, the containers are unsigned, and the Debian PPA is community-made and still at 1.11.2. So FreeSynergy builds from source (ADR 0068, "built only where a format is missing"):
+Kanidm publishes no signed packages (checked 2026-11-13): GitHub releases carry no files, the tag `v1.12.1` and its commit are unsigned, the containers are unsigned, and the Debian PPA is community-made and still at 1.11.2. So FreeSynergy builds from source (ADR 0068, "built only where a format is missing"):
 
 1. `mirror.toml` pins the release tag and the **commit SHA**. The workflow stops unless the upstream tag still points to exactly that commit.
 2. GitHub Actions builds the binaries (profile `release_debian`) and the source tarball of the same version (Kanidm is MPL-2.0: the source travels with the binary), plus an SBOM.

@@ -1,6 +1,6 @@
 # Spiegel und Prüfung
 
-Kanidm bietet keine signierten Pakete an (geprüft am 11.11.2026): GitHub-Releases enthalten keine Dateien, der Tag `v1.12.1` und sein Commit sind unsigniert, die Container sind unsigniert, und das Debian-PPA stammt aus der Gemeinschaft und steht noch bei 1.11.2. FreeSynergy baut deshalb aus dem Quellcode (ADR 0068, „gebaut wird nur, wo ein Format fehlt“):
+Kanidm bietet keine signierten Pakete an (geprüft am 13.11.2026): GitHub-Releases enthalten keine Dateien, der Tag `v1.12.1` und sein Commit sind unsigniert, die Container sind unsigniert, und das Debian-PPA stammt aus der Gemeinschaft und steht noch bei 1.11.2. FreeSynergy baut deshalb aus dem Quellcode (ADR 0068, „gebaut wird nur, wo ein Format fehlt“):
 
 1. `mirror.toml` legt Release-Tag und **Commit-SHA** fest. Der Workflow bricht ab, wenn der Upstream-Tag nicht mehr genau auf diesen Commit zeigt.
 2. GitHub Actions baut die Programme (Profil `release_debian`) und das Quellcode-Archiv derselben Version (Kanidm steht unter MPL-2.0: der Quellcode reist mit dem Programm), dazu eine SBOM.
